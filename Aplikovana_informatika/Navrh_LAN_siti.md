@@ -58,10 +58,11 @@
 - L3 (Paketový / síťový)
 - L7 Aplikační (Windows defender, TinyWall)
 - L4 Stavový (TCP UDP => {**Porty**} )
-| Tabulky | Mangle | RAW | NAT | Filter |
-|---------|--------|-----|-----|--------|
-|    /    |    /    |   /  |  SRC-NAT   | Input a Output|
-|   /     |    /    |  /   | DST-NAT    | Forward |
+| Tabulky | Mangle | RAW | NAT      | Filter           |
+|---------|--------|-----|----------|------------------|
+| /       | /      | /   | SRC-NAT  | Input a Output   |
+| /       | /      | /   | DST-NAT  | Forward          |
+
 
 ## ip adresy
 ## zabezpečení 
