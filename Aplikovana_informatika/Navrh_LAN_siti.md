@@ -58,13 +58,19 @@
 - L3 (Paketový / síťový)
 - L7 Aplikační (Windows defender, TinyWall)
 - L4 Stavový (TCP UDP => {**Porty**} )
-- 
-| Tabulky | Mangle | RAW | NAT      | Filter           |
-|---------|--------|-----|----------|------------------|
-| /       | /      | /   | SRC-NAT  | Input a Output   |
-| /       | /      | /   | DST-NAT  | Forward          |
 
+| Tabulky | Mangle | RAW | NAT     | Filter         |
+| ------- | ------ | --- | ------- | -------------- |
+| /       | /      | /   | SRC-NAT | Input a Output |
+| /       | /      | /   | DST-NAT | Forward        |
+Mikrotik stránky pro maturitu
+Packet se označují pouze v routeru ne když z něho vyjde dá se to tak nastavit 
 
+co firewall může s pakety dělat
+- Log (L7) 
+- Accep je automatický skip dalších akcích (není pass true)
+- Drop není pass true packet zahodí
+- Reject  packet zahodí ale pošle zprávu ICMP message (používá aby se nedalo udělat ping)
 ## ip adresy
 ## zabezpečení 
 ## rychlosti k
