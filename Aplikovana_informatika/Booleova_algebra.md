@@ -1,88 +1,98 @@
-# **Booleova algebra**
-- je oblast matematiky, která se zabývá **logickými hodnotami** a **operacemi s nimi**. Používá se hlavně v **informatice, elektronice a logice**, například při návrhu **logických obvodů** nebo **programování podmínek**
-- Je algebra pracující: s logickými hodnotami 0 a 1
+# Maturitní otázka: Logické funkce a jejich minimalizace
 
-## Základními operacemi:
--  negace
-- logický součet
-- logický součin
+**Tagy:** #maturita #ops #hardware #logika
+**Doba projevu:** cca 15 minut
+**Zdroje:** Prezentace 231, 232, 233, 234
 
-###  Negace
-- **NOT**                                               Pravděpodobnostní tabulka
+---
 
-![Logicky_NOT](./Obrazky/Booleova_Algebra/Logicky_NOT.png)
+## 1. Úvod: O co tady jde?
+*Na úvod musíš říct, že počítače neumí počítat s desítkovými čísly (0-9), ale jen s nulami a jedničkami.*
 
-**Symbol: ¬A, Ā**
-#### Praktická ukázka:
-- Není-li hezky, je špatné počasí
-### Logický součet 
-- **OR - nebo**
-- disjunkce                                         Pravděpodobnostní tabulka
+* **Booleova algebra** je matematický základ fungování počítačů.
+* Pracuje pouze se dvěma stavy:
+    * **1 (True/Pravda):** Proud teče, vysoké napětí.
+    * **0 (False/Nepravda):** Proud neteče, nízké napětí.
+* **Cíl této otázky:** Máme nějakou složitou logickou funkci (obvod) a chceme ji **minimalizovat** (zjednodušit), aby dělala to samé, ale byla levnější a rychlejší.
 
-![Logicky_OR](./Obrazky/Booleova_Algebra/Logicky_OR.png) 
+---
 
-**Symbol: A+B, A∨B**
-#### Praktický příklad:
-- Projdete zkouškou, pokud máte 50% bodů **Nebo** vám profesor pomůže
-### Logický součin
-- **AND - a (zároveň)**
-- konjunkce                                    Pravděpodobností tabulka
+## 2. Základní logické operace
+*Tohle je abeceda. Musíš znát tři hlavní hradla.*
 
+1.  **Negace (NOT):** Obrací hodnotu. Z 0 udělá 1, z 1 udělá 0.
+    * *Značení:* Pruh nad písmenem ($\bar{A}$) nebo apostrof ($A'$).
+2.  **Logický součin (AND):** Musí platit **všechny** vstupy naraz, aby byl výstup 1.
+    * *Analogie:* Aby auto jelo, musíš mít benzín **A** klíčky.
+    * *Značení:* Tečka ($A \cdot B$).
+3.  **Logický součet (OR):** Stačí, aby platil **alespoň jeden** vstup.
+    * *Analogie:* Do kina půjdu, když bude pršet **NEBO** budu mít peníze.
+    * *Značení:* Plus ($A + B$).
 
-![Logicky AND](./Obrazky/Booleova_Algebra/Logicky_AND.png)
+---
+## 3. Pravidla a zákony (Jak s tím počítat)
+*Nemusíš recitovat všechny, ale vypíchni ty nejdůležitější pro úpravy.*
 
-**Symbol: A·B, A∧B**
-#### Praktický příklad:
-- Můžete koupit sladkosti, pokud máte peníze "A" a máte hlad "B"
-###  Výlučný logický součet
-- **XOR**                                            Pravděpodobností tabulka
- 
- ![Logicky_XOR](./Obrazky/Booleova_Algebra/Logicky_XOR.png)
- 
-**Symbol: A⊕B**
-#### Praktický příklad:
-- Půjdete do kina **nebo** na procházku, ale ne na obojí
-### Negovaný logický součet
-- **NOR**                                             Pravděpodobností tabulka
+* **Komutativnost:** $A + B = B + A$ (je jedno, v jakém pořadí to je).
+* **Asociativnost:** $(A + B) + C = A + (B + C)$ (závorky nehrají roli u stejných znamének).
+* **Absorpce:** Důležité pro zjednodušování!
+    * $A \cdot (A + B) = A$ (To $B$ se "vyruší/absorbuje", protože $A$ je silnější).
+* **De Morganovy zákony:** (Super důležité pro negaci celých výrazů)
+    * Když znegujete celý výraz, změní se znaménko.
+    * $\overline{A \cdot B} = \bar{A} + \bar{B}$ (Součin se mění na součet).
+    * $\overline{A + B} = \bar{A} \cdot \bar{B}$ (Součet se mění na součin).
 
-![Logicky_NOR](./Obrazky/Booleova_Algebra/Logicky_NOR.png)
+> [!TIP] Pomůcka pro De Morgana
+> "trhni čáru, změň znaménko". Když přetrhneš negaci nad celým výrazem, musíš otočit znaménko uprostřed.
 
-**Symbol: ¯(A+B)**
-#### Praktický příklad:
-- Nemáte čas **Ani** nemáte peníze
-### Negovaný logický součin 
-- **NAND**                                          Pravděpodobností tabulka
+---
+## 4. Vyjádření logické funkce (Formy)
+*Jak tu funkci zapíšeme? Máme dvě hlavní možnosti.*
 
-![Logicky_NAND](./Obrazky/Booleova_Algebra/Logicky_NAND.png)
+Představ si **pravdivostní tabulku** (seznam všech kombinací 0 a 1).
 
-**Symbol: ¯(A·B)**
+1.  **Úplný součtový tvar (Disjunktivní - DNF):**
+    * Koukáme se na řádky, kde je výsledek **1**.
+    * Vytváříme tzv. **mintermy**.
+2.  **Úplný součinový tvar (Konjunktivní - CNF):**
+    * Koukáme se na řádky, kde je výsledek **0**.
+    * Vytváříme tzv. **maxtermy**.
 
-#### Praktický přiklad:
-- Není pravda, že máte peníze **a** máte čas
-### **Komutativnost**
-- Pořadí operandů nemá vliv na výsledek
-![Komutativnost](./Obrazky/Booleova_Algebra/Komutativnost.png) 
-### **Asociativita**
-- Seskupení operandů nemá vliv na výsledek
-![Asociativita](./Obrazky/Booleova_Algebra/Asociativita.png)
-### **Distributivnost**
-- Umožnuje rozvinout nebo faktorizovat výrazy
-![Distributivnost](./Obrazky/Booleova_Algebra/Distributivnost.png)
+---
+## 5. Minimalizace (To hlavní "maso")
+*Proč to děláme?*
+Když navrhujeme procesor, chceme co nejméně hradel (transistorů). Méně hradel = menší spotřeba, menší teplo, nižší cena, vyšší rychlost.
 
-### **Vlastnosti**
-![Booleova algebra - vlastnosti](./Obrazky/Booleova_Algebra/Booleova_algebra_vlastnosti.png)
+Máme 3 způsoby, jak na to:
+### A) Algebraická minimalizace
+* Počítáme to ručně pomocí vzorečků (vytýkání, krácení, De Morgan).
+* *Nevýhoda:* U složitých funkcí je to pracné a snadno uděláš chybu.
+### B) Karnaughovy mapy (Grafická metoda)
+* Nejpoužívanější u maturity. Je to vlastně "přeskládaná tabulka" do mřížky.
+* **Princip:**
+    1.  Nakreslíš tabulku (pro 4 proměnné je to 4x4 políčka).
+    2.  Osy popíšeš v **Grayově kódu** (00, 01, 11, 10). *Pozor: 11 a 10 jsou prohozené, aby se vždy měnila jen jedna číslice!*
+    3.  Doplníš jedničky tam, kde má funkce hodnotu 1.
+    4.  **Smyčkování (Grupování):** Kroužkuješ skupiny jedniček.
+        * Pravidlo 1: Skupina musí být obdélník nebo čtverec.
+        * Pravidlo 2: Počet jedniček ve skupině musí být mocnina dvojky (1, 2, 4, 8, 16).
+        * Pravidlo 3: Mapa je "zacyklená" – kraje k sobě patří (jako v Pac-Manovi, vyjedeš vpravo, vyjedeš vlevo).
+    5.  **Výsledek:** Z každé smyčky vznikne jeden zjednodušený výraz. Proměnná, která se v rámci smyčky mění (je tam 0 i 1), vypadává. Zůstává jen ta, co se nemění.
 
-### **De Morganovy zákony**
-![De Morganvy zákony](./Obrazky/Booleova_Algebra/De_Morganovy_zakony.png)
+### C) Quine-McCluskey (Tabulková metoda)
+* Používá se, když je proměnných hodně (5 a více), kde už je K-mapa nepřehledná.
+* Je to algoritmus, který se dá naprogramovat do počítače.
+* **Princip:**
+    1.  Vypíšeš si všechny stavy (indexy), kde je 1.
+    2.  Hledáš dvojice, které se liší jen v **jednom bitu**.
+    3.  Tím vznikají tzv. **prostí implikanti**.
+    4.  Děláš to ve více krocích, dokud to jde redukovat.
+    5.  Nakonec sestavíš tabulku pokrytí a vybereš nezbytné členy.
 
-### Příklad 231.1
-$Z=B\cdot\left(\overline{C+D}\right)+A\cdot B\cdot\left(\overline{C+D}\right)=$
-- Výsledek je $Z=B\cdot\overline{C}\cdot\overline{D}$
-
-
-pod témata 
-Boleova algebra
-operace a vlastnosti
-K mapy
-úplné součtové a součiné mapy
-co to je a tak
+---
+## 6. Závěr (Shrnutí)
+1.  Počítače pracují v **Booleově algebře** (0 a 1).
+2.  Základní hradla jsou **NOT, AND, OR**.
+3.  Funkce zapisujeme buď podle jedniček (součtový tvar) nebo nul (součinový tvar).
+4.  Aby byl hardware efektivní, musíme funkce **minimalizovat**.
+5.  Pro člověka je nejlepší **Karnaughova mapa** (grafická), pro počítač **Quine-McCluskey** (algoritmus).

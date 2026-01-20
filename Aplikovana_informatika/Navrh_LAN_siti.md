@@ -1,4 +1,4 @@
-# Síťové  Topologie (Struktura sítě)
+y# Síťové  Topologie (Struktura sítě)
 - Topologie určuje, jak jsou zařízení v síti vzájemně propojena. Dělíme ji na fyzickou (jak vedou kabely) a logickou (jak tečou data)
 
 ![Topologie](./Obrazky/Navrh_LAN_siti/Topologie.jpeg)

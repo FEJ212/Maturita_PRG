@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cc2be0212bd3b27c",
+        "id": "1034d402a9f994f0",
         "type": "tabs",
         "children": [
           {
-            "id": "ef24b23045ead174",
+            "id": "f47d6b8ccc31109e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aplikovana_informatika/Navrh_LAN_siti.md",
+                "file": "Aplikovana_informatika/Databazove_systemy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Navrh_LAN_siti"
+              "title": "Databazove_systemy"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Souborový",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Maturitni_knihy/Na_zapadni_fronte_klid.md",
+                "file": "Aplikovana_informatika/Databazove_systemy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Přehled Na_zapadni_fronte_klid"
+              "title": "Přehled Databazove_systemy"
             }
           }
         ],
@@ -156,8 +156,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,37 +170,37 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ef24b23045ead174",
+  "active": "f47d6b8ccc31109e",
   "lastOpenFiles": [
-    "Aplikovana_informatika/Komponenty_pocitacových_systemu.md",
+    "Aplikovana_informatika/Instalace_OS.md",
     "Aplikovana_informatika/Kyberbezpecnostni_uzivatelska_opatreni.md",
-    "Aplikovana_informatika/Datove_typy.md",
-    "Aplikovana_informatika/Databazove_systemy.md",
     "Aplikovana_informatika/Navrh_LAN_siti.md",
-    "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/OSI_Model.png",
-    "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/Nepotvrzeno 949144.crdownload",
-    "Aplikovana_informatika/Booleova_algebra.md",
-    "Aplikovana_informatika/Pasivni_a_aktivni_prvky_v_LAN_sitich.md",
-    "Maturitni_knihy/Na_zapadni_fronte_klid.md",
-    "Maturitni_knihy/Kytice.md",
-    "Maturitni_knihy/Alchymista.md",
-    "Maturitni_knihy/Denik_Anny_Frankove.md",
-    "Maturitni_knihy/Kral_Lavra.md",
-    "Maturitni_knihy/Ukazky/Romeo_a_Julie.png",
-    "2025-12-05.md",
-    "Aplikovana_informatika/Aplikace_s_GUI.md",
-    "Programovani/README.md",
-    "Programovani/Datove_Struktury.md",
-    "Programovani/Bezdratove_prenosy_-_wifi.md",
-    "Aplikovana_informatika/Zakladni_zabezpeceni_OS.md",
-    "Aplikovana_informatika/Webove_aplikace.md",
+    "Aplikovana_informatika/Pasivni_elektronicke_soucastky.md",
+    "Aplikovana_informatika/Rastrova_grafika.md",
     "Aplikovana_informatika/Tabulkove_procesory.md",
+    "Aplikovana_informatika/Vektorova_grafika.md",
+    "Aplikovana_informatika/Webove_aplikace.md",
+    "Aplikovana_informatika/Zakladni_diagnostika_v_LAN_sitich.md",
+    "Aplikovana_informatika/Zakladni_zabezpeceni_OS.md",
+    "Aplikovana_informatika/Zalohovani_OS,_dat.md",
     "Aplikovana_informatika/Smerovani_v_LAN_sitich.md",
     "Aplikovana_informatika/Rozdeleni_aplikaci_a_softwarove_licence.md",
-    "Aplikovana_informatika/README.md",
-    "Aplikovana_informatika/Rastrova_grafika.md",
-    "Aplikovana_informatika/Pasivni_elektronicke_soucastky.md",
-    "Aplikovana_informatika/Instalace_OS.md",
+    "Aplikovana_informatika/Komponenty_pocitacových_systemu.md",
+    "Aplikovana_informatika/Datove_typy.md",
+    "Aplikovana_informatika/Databazove_systemy.md",
+    "Aplikovana_informatika/Bootovani_a_zavadeni_OS.md",
+    "Aplikovana_informatika/Cloudove_aplikace.md",
+    "Aplikovana_informatika/Aplikace_s_GUI.md",
+    "Aplikovana_informatika/Aktivni_elektronicke_soucastky.md",
+    "Aplikovana_informatika/Booleova_algebra.md",
+    "Programovani/Souborove_systemy_OS.md",
+    "Programovani/Dynamicky_typovane_programovaci_jazyky.md",
+    "Programovani/Bezdratove_prenosy_-_wifi.md",
+    "Programovani/Funkcionalni_programovani.md",
+    "Programovani/Objektove_orientovane_programovani.md",
+    "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/OSI_Model.png",
+    "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/Nepotvrzeno 949144.crdownload",
+    "Maturitni_knihy/Ukazky/Romeo_a_Julie.png",
     "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/Topologie.jpeg",
     "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/Nepotvrzeno 320008.crdownload",
     "Aplikovana_informatika/Obrazky/Navrh_LAN_siti/Switch_navrh.png",
